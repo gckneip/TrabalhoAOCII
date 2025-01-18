@@ -1,35 +1,8 @@
-# load configuration from a file
-# -config               
-
-# dump configuration to a file
-# -dumpconfig           
-
-# print help message
-# -h                          false 
-
-# verbose operation
-# -v                          false 
-
-# enable debug message
-# -d                          false 
-
-# start in Dlite debugger
-# -i                          false 
-
 # random number generator seed (0 for timer seed)
 -seed                             1 
 
-# initialize and terminate immediately
-# -q                          false 
-
-# restore EIO trace execution from <fname>
-# -chkpt                     <null> 
-
 # redirect simulator output to file (non-interactive only)
--redir:sim                 ../Trab1/output/simulationResume.txt 
-
-# redirect simulated program output to file
--redir:prog                ../Trab1/output/simulationResult.txt
+-redir:sim                 ../TrabalhoAOCII/output/ex1_1.txt 
 
 # simulator scheduling priority
 -nice                             0 
@@ -60,7 +33,4 @@
 
 # convert 64-bit inst addresses to 32-bit inst equivalents
 -cache:icompress              false 
-
-# profile stat(s) against text addr's (mult uses ok)
-# -pcstat                    <null> 
 
