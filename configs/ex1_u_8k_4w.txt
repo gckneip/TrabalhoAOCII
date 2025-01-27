@@ -20,10 +20,10 @@
 -cache:il2             none 
 
 # instruction TLB config, i.e., {<config>|none}
--tlb:itlb              itlb:16:4096:4:l 
+-tlb:itlb              none
 
 # data TLB config, i.e., {<config>|none}
--tlb:dtlb              dtlb:32:4096:4:l 
+-tlb:dtlb              none 
 
 # flush caches on system calls
 -flush                        false 
