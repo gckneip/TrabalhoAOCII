@@ -5,7 +5,7 @@
 -max:inst                         0 
 
 # l1 data cache config, i.e., {<config>|none}
--cache:dl1             ul1:512:4:1:l 
+-cache:dl1             ul1:256:8:1:l 
 
 # l2 data cache config, i.e., {<config>|none}
 -cache:dl2             none 

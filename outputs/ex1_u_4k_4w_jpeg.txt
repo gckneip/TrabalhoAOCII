@@ -7,7 +7,7 @@ of SimpleScalar, LLC (info@simplescalar.com).
 
 sim: command line: ../simplesim-3.0/sim-cache -config ./configs/ex1_u_4k_4w.txt -redir:sim ./outputs/ex1_u_4k_4w_jpeg.txt ./benchmarks/jpeg/ijpeg.ss -image_file ./benchmarks/jpeg/tinyrose.ppm -compression.quality 90 -compression.optimize_coding 0 -compression.smoothing_factor 90 -difference.image 1 -difference.x_stride 10 -difference.y_stride 10 -verbose 1 -GO.findoptcomp 
 
-sim: simulation started @ Mon Jan 20 20:02:23 2025, options follow:
+sim: simulation started @ Tue Jan 28 18:59:23 2025, options follow:
 
 sim-cache: This simulator implements a functional cache simulator.  Cache
 statistics are generated for a user-selected cache and TLB configuration,
@@ -68,15 +68,15 @@ information is generated.
 sim: ** starting functional simulation w/ caches **
 
 sim: ** simulation statistics **
-sim_num_insn               77092898 # total number of instructions executed
-sim_num_refs               19029850 # total number of loads and stores executed
+sim_num_insn               77098786 # total number of instructions executed
+sim_num_refs               19030874 # total number of loads and stores executed
 sim_elapsed_time                  6 # total simulation time in seconds
-sim_inst_rate          12848816.3333 # simulation speed (in insts/sec)
-ul1.accesses               96327779 # total number of accesses
-ul1.hits                   90782940 # total number of hits
-ul1.misses                  5544839 # total number of misses
-ul1.replacements            5544583 # total number of replacements
-ul1.writebacks               908137 # total number of writebacks
+sim_inst_rate          12849797.6667 # simulation speed (in insts/sec)
+ul1.accesses               96334691 # total number of accesses
+ul1.hits                   90789508 # total number of hits
+ul1.misses                  5545183 # total number of misses
+ul1.replacements            5544927 # total number of replacements
+ul1.writebacks               908477 # total number of writebacks
 ul1.invalidations                 0 # total number of invalidations
 ul1.miss_rate                0.0576 # miss rate (i.e., misses/ref)
 ul1.repl_rate                0.0576 # replacement rate (i.e., repls/ref)
@@ -94,6 +94,6 @@ ld_target_big_endian              0 # target executable endian-ness, non-zero if
 mem.page_count                  572 # total number of pages allocated
 mem.page_mem                  2288k # total size of memory pages allocated
 mem.ptab_misses                 575 # total first level page table misses
-mem.ptab_accesses         349281635 # total page table accesses
+mem.ptab_accesses         349307289 # total page table accesses
 mem.ptab_miss_rate           0.0000 # first level page table miss rate
 

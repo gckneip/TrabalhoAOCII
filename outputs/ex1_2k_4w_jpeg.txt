@@ -7,7 +7,7 @@ of SimpleScalar, LLC (info@simplescalar.com).
 
 sim: command line: ../simplesim-3.0/sim-cache -config ./configs/ex1_2k_4w.txt -redir:sim ./outputs/ex1_2k_4w_jpeg.txt ./benchmarks/jpeg/ijpeg.ss -image_file ./benchmarks/jpeg/tinyrose.ppm -compression.quality 90 -compression.optimize_coding 0 -compression.smoothing_factor 90 -difference.image 1 -difference.x_stride 10 -difference.y_stride 10 -verbose 1 -GO.findoptcomp 
 
-sim: simulation started @ Mon Jan 20 20:01:54 2025, options follow:
+sim: simulation started @ Tue Jan 28 18:59:05 2025, options follow:
 
 sim-cache: This simulator implements a functional cache simulator.  Cache
 statistics are generated for a user-selected cache and TLB configuration,
@@ -68,12 +68,12 @@ information is generated.
 sim: ** starting functional simulation w/ caches **
 
 sim: ** simulation statistics **
-sim_num_insn               77092898 # total number of instructions executed
-sim_num_refs               19029850 # total number of loads and stores executed
+sim_num_insn               77098786 # total number of instructions executed
+sim_num_refs               19030874 # total number of loads and stores executed
 sim_elapsed_time                  6 # total simulation time in seconds
-sim_inst_rate          12848816.3333 # simulation speed (in insts/sec)
-il1.accesses               77092898 # total number of accesses
-il1.hits                   72716267 # total number of hits
+sim_inst_rate          12849797.6667 # simulation speed (in insts/sec)
+il1.accesses               77098786 # total number of accesses
+il1.hits                   72722155 # total number of hits
 il1.misses                  4376631 # total number of misses
 il1.replacements            4376503 # total number of replacements
 il1.writebacks                    0 # total number of writebacks
@@ -82,11 +82,11 @@ il1.miss_rate                0.0568 # miss rate (i.e., misses/ref)
 il1.repl_rate                0.0568 # replacement rate (i.e., repls/ref)
 il1.wb_rate                  0.0000 # writeback rate (i.e., wrbks/ref)
 il1.inv_rate                 0.0000 # invalidation rate (i.e., invs/ref)
-dl1.accesses               19234881 # total number of accesses
-dl1.hits                   17684131 # total number of hits
-dl1.misses                  1550750 # total number of misses
-dl1.replacements            1550622 # total number of replacements
-dl1.writebacks               801613 # total number of writebacks
+dl1.accesses               19235905 # total number of accesses
+dl1.hits                   17684942 # total number of hits
+dl1.misses                  1550963 # total number of misses
+dl1.replacements            1550835 # total number of replacements
+dl1.writebacks               801742 # total number of writebacks
 dl1.invalidations                 0 # total number of invalidations
 dl1.miss_rate                0.0806 # miss rate (i.e., misses/ref)
 dl1.repl_rate                0.0806 # replacement rate (i.e., repls/ref)
@@ -104,6 +104,6 @@ ld_target_big_endian              0 # target executable endian-ness, non-zero if
 mem.page_count                  572 # total number of pages allocated
 mem.page_mem                  2288k # total size of memory pages allocated
 mem.ptab_misses                 575 # total first level page table misses
-mem.ptab_accesses         349281635 # total page table accesses
+mem.ptab_accesses         349307289 # total page table accesses
 mem.ptab_miss_rate           0.0000 # first level page table miss rate
 

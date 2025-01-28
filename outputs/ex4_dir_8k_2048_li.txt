@@ -7,7 +7,7 @@ of SimpleScalar, LLC (info@simplescalar.com).
 
 sim: command line: ../simplesim-3.0/sim-cache -config ./configs/ex4_dir_8k_2048.txt -redir:sim ./outputs/ex4_dir_8k_2048_li.txt ./benchmarks/li//li.ss ./benchmarks/li//li.lsp 
 
-sim: simulation started @ Mon Jan 20 17:31:13 2025, options follow:
+sim: simulation started @ Tue Jan 28 19:14:49 2025, options follow:
 
 sim-cache: This simulator implements a functional cache simulator.  Cache
 statistics are generated for a user-selected cache and TLB configuration,
@@ -70,8 +70,8 @@ sim: ** starting functional simulation w/ caches **
 sim: ** simulation statistics **
 sim_num_insn              957030134 # total number of instructions executed
 sim_num_refs              455366256 # total number of loads and stores executed
-sim_elapsed_time                 69 # total simulation time in seconds
-sim_inst_rate          13870001.9420 # simulation speed (in insts/sec)
+sim_elapsed_time                 68 # total simulation time in seconds
+sim_inst_rate          14073972.5588 # simulation speed (in insts/sec)
 il1.accesses              957030134 # total number of accesses
 il1.hits                  936496294 # total number of hits
 il1.misses                 20533840 # total number of misses
@@ -104,6 +104,6 @@ ld_target_big_endian              0 # target executable endian-ness, non-zero if
 mem.page_count                   74 # total number of pages allocated
 mem.page_mem                   296k # total size of memory pages allocated
 mem.ptab_misses                  74 # total first level page table misses
-mem.ptab_accesses        4741229324 # total page table accesses
+mem.ptab_accesses        4741229378 # total page table accesses
 mem.ptab_miss_rate           0.0000 # first level page table miss rate
 
