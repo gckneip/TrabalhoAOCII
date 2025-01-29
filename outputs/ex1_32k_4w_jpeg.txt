@@ -7,7 +7,7 @@ of SimpleScalar, LLC (info@simplescalar.com).
 
 sim: command line: ../simplesim-3.0/sim-cache -config ./configs/ex1_32k_4w.txt -redir:sim ./outputs/ex1_32k_4w_jpeg.txt ./benchmarks/jpeg/ijpeg.ss -image_file ./benchmarks/jpeg/tinyrose.ppm -compression.quality 90 -compression.optimize_coding 0 -compression.smoothing_factor 90 -difference.image 1 -difference.x_stride 10 -difference.y_stride 10 -verbose 1 -GO.findoptcomp 
 
-sim: simulation started @ Tue Jan 28 18:59:11 2025, options follow:
+sim: simulation started @ Tue Jan 28 20:54:46 2025, options follow:
 
 sim-cache: This simulator implements a functional cache simulator.  Cache
 statistics are generated for a user-selected cache and TLB configuration,

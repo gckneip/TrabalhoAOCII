@@ -5,9 +5,9 @@ non-commercial use.  No portion of this work may be used by any commercial
 entity, or for any commercial purpose, without the prior written permission
 of SimpleScalar, LLC (info@simplescalar.com).
 
-sim: command line: ../simplesim-3.0/sim-cache -config ./configs/ex1_u_4k_4w.txt -redir:sim ./outputs/ex1_u_4k_4w_jpeg.txt ./benchmarks/jpeg/ijpeg.ss -image_file ./benchmarks/jpeg/tinyrose.ppm -compression.quality 90 -compression.optimize_coding 0 -compression.smoothing_factor 90 -difference.image 1 -difference.x_stride 10 -difference.y_stride 10 -verbose 1 -GO.findoptcomp 
+sim: command line: ../simplesim-3.0/sim-cache -config ./configs/ex1_8k_4w.txt -redir:sim ./outputs/ex1_8k_4w_li.txt ./benchmarks/li//li.ss ./benchmarks/li//li.lsp 
 
-sim: simulation started @ Tue Jan 28 20:55:18 2025, options follow:
+sim: simulation started @ Tue Jan 28 21:00:42 2025, options follow:
 
 sim-cache: This simulator implements a functional cache simulator.  Cache
 statistics are generated for a user-selected cache and TLB configuration,
@@ -24,13 +24,13 @@ information is generated.
 -seed                       1 # random number generator seed (0 for timer seed)
 # -q                    false # initialize and terminate immediately
 # -chkpt               <null> # restore EIO trace execution from <fname>
-# -redir:sim     ./outputs/ex1_u_4k_4w_jpeg.txt # redirect simulator output to file (non-interactive only)
+# -redir:sim     ./outputs/ex1_8k_4w_li.txt # redirect simulator output to file (non-interactive only)
 # -redir:prog          <null> # redirect simulated program output to file
 -nice                       0 # simulator scheduling priority
 -max:inst                   0 # maximum number of inst's to execute
--cache:dl1       ul1:64:16:4:l # l1 data cache config, i.e., {<config>|none}
+-cache:dl1       dl1:128:16:4:l # l1 data cache config, i.e., {<config>|none}
 -cache:dl2               none # l2 data cache config, i.e., {<config>|none}
--cache:il1                dl1 # l1 inst cache config, i.e., {<config>|dl1|dl2|none}
+-cache:il1       il1:128:16:4:l # l1 inst cache config, i.e., {<config>|dl1|dl2|none}
 -cache:il2               none # l2 instruction cache config, i.e., {<config>|dl2|none}
 -tlb:itlb                none # instruction TLB config, i.e., {<config>|none}
 -tlb:dtlb                none # data TLB config, i.e., {<config>|none}
@@ -68,32 +68,42 @@ information is generated.
 sim: ** starting functional simulation w/ caches **
 
 sim: ** simulation statistics **
-sim_num_insn               77098786 # total number of instructions executed
-sim_num_refs               19030874 # total number of loads and stores executed
-sim_elapsed_time                  9 # total simulation time in seconds
-sim_inst_rate          8566531.7778 # simulation speed (in insts/sec)
-ul1.accesses               96334691 # total number of accesses
-ul1.hits                   90789508 # total number of hits
-ul1.misses                  5545183 # total number of misses
-ul1.replacements            5544927 # total number of replacements
-ul1.writebacks               908477 # total number of writebacks
-ul1.invalidations                 0 # total number of invalidations
-ul1.miss_rate                0.0576 # miss rate (i.e., misses/ref)
-ul1.repl_rate                0.0576 # replacement rate (i.e., repls/ref)
-ul1.wb_rate                  0.0094 # writeback rate (i.e., wrbks/ref)
-ul1.inv_rate                 0.0000 # invalidation rate (i.e., invs/ref)
+sim_num_insn              957030134 # total number of instructions executed
+sim_num_refs              455366256 # total number of loads and stores executed
+sim_elapsed_time                 98 # total simulation time in seconds
+sim_inst_rate          9765613.6122 # simulation speed (in insts/sec)
+il1.accesses              957030134 # total number of accesses
+il1.hits                  924568369 # total number of hits
+il1.misses                 32461765 # total number of misses
+il1.replacements           32461253 # total number of replacements
+il1.writebacks                    0 # total number of writebacks
+il1.invalidations                 0 # total number of invalidations
+il1.miss_rate                0.0339 # miss rate (i.e., misses/ref)
+il1.repl_rate                0.0339 # replacement rate (i.e., repls/ref)
+il1.wb_rate                  0.0000 # writeback rate (i.e., wrbks/ref)
+il1.inv_rate                 0.0000 # invalidation rate (i.e., invs/ref)
+dl1.accesses              455989946 # total number of accesses
+dl1.hits                  446855340 # total number of hits
+dl1.misses                  9134606 # total number of misses
+dl1.replacements            9134094 # total number of replacements
+dl1.writebacks              7499657 # total number of writebacks
+dl1.invalidations                 0 # total number of invalidations
+dl1.miss_rate                0.0200 # miss rate (i.e., misses/ref)
+dl1.repl_rate                0.0200 # replacement rate (i.e., repls/ref)
+dl1.wb_rate                  0.0164 # writeback rate (i.e., wrbks/ref)
+dl1.inv_rate                 0.0000 # invalidation rate (i.e., invs/ref)
 ld_text_base             0x00400000 # program text (code) segment base
-ld_text_size                 396976 # program text (code) size in bytes
+ld_text_size                 180640 # program text (code) size in bytes
 ld_data_base             0x10000000 # program initialized data segment base
-ld_data_size               16806436 # program init'ed `.data' and uninit'ed `.bss' size in bytes
+ld_data_size                  20788 # program init'ed `.data' and uninit'ed `.bss' size in bytes
 ld_stack_base            0x7fffc000 # program stack segment base (highest address in stack)
 ld_stack_size                 16384 # program initial stack size
 ld_prog_entry            0x00400140 # program entry point (initial PC)
 ld_environ_base          0x7fff8000 # program environment base address address
 ld_target_big_endian              0 # target executable endian-ness, non-zero if big endian
-mem.page_count                  572 # total number of pages allocated
-mem.page_mem                  2288k # total size of memory pages allocated
-mem.ptab_misses                 575 # total first level page table misses
-mem.ptab_accesses         349307289 # total page table accesses
+mem.page_count                   74 # total number of pages allocated
+mem.page_mem                   296k # total size of memory pages allocated
+mem.ptab_misses                  74 # total first level page table misses
+mem.ptab_accesses        4741229378 # total page table accesses
 mem.ptab_miss_rate           0.0000 # first level page table miss rate
 
